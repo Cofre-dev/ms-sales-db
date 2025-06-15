@@ -12,24 +12,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "sales")
+@Table(name = "sales_detail")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Sales {
+public class SalesDetail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="amount")
-    private Long amount;
+    @Column(name="product_id")
+    private Long productId;
 
-    @Column(name="sales_date")
-    private String salesDate;
+    @Column(name="quantity")
+    private Long quantity;
 
-    @Column(name= "customer_id")
-    private Long customerId;
-
+    @Column(name= "sales_id")
+    private Long salesId;
 }
